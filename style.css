@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: #FFF5E4;
+    overflow: hidden;
+}
+
+/* ---------------- PANTALLAS ---------------- */
+
+.pantalla {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+}
+
+.pantalla.activa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------------- TITULOS ---------------- */
+
+.titulo {
+    font-size: 3rem;
+    color: #C084FC;
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    font-size: 1.3rem;
+    color: #FF6B81;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #C084FC;
+    margin-bottom: 20px;
+}
+
+/* ---------------- BOTONES ---------------- */
+
+.boton {
+    background-color: #F8C8DC;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #FFB7A5;
+    transform: scale(1.05);
+}
+
+/* ---------------- PERSONAJES ---------------- */
+
+.personajes-inicio img,
+.personajes-final img {
+    width: 120px;
+    margin: 10px;
+}
+
+.personaje {
+    width: 100px;
+    position: absolute;
+}
+
+#tatianaMove {
+    left: 50px;
+    bottom: 50px;
+}
+
+#julianFinal {
+    right: 50px;
+    bottom: 50px;
+}
+
+/* ---------------- NIVEL 1 ---------------- */
+
+.zona-balon img {
+    width: 120px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.zona-balon img:hover {
+    transform: scale(1.1);
+}
+
+.frase {
+    margin-top: 20px;
+    color: #FF6B81;
+    font-size: 1.1rem;
+}
+#curryContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#curryContainer img {
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.oculto {
+    display: none;
+}
+
+/* ---------------- NIVEL 2 ---------------- */
+
+#nivel2 {
+    background-color: #D8B4F8;
+}
+
+.canciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.cancion {
+    background-color: #FFF5E4;
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cancion:hover {
+    background-color: #F8C8DC;
+    transform: scale(1.05);
+}
+
+.cancion p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* ---------------- CORAZONES ANIMADOS ---------------- */
+
+.corazones::before,
+.corazones::after {
+    content: "💗 💕 💖 💗 💕 💖";
+    position: absolute;
+    width: 100%;
+    font-size: 1.5rem;
+    animation: flotar 10s linear infinite;
+    opacity: 0.6;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(-10vh);
+    }
+}
+
+/* ---------------- MEMORIA ---------------- */
+
+.memoria {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.carta {
+    width: 80px;
+    height: 80px;
+    background-color: #F8C8DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ---------------- FINAL ---------------- */
+
+#final {
+    background: linear-gradient(to top, #C084FC, #F8C8DC);
+    color: white;
+}
+
+.mensaje-final {
+    text-align: center;
+}
+
+.creditos {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #FF6B81;
+}
+/* --------- EXPLOSION DE CORAZONES --------- */
+
+.explosion-corazon {
+    position: absolute;
+    font-size: 20px;
+    animation: explotar 1.5s ease-out forwards;
+}
+
+@keyframes explotar {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(1.5);
+    }
+}
+
+/* Animación pequeña de salto */
+
+.salto {
+    animation: saltito 0.5s ease;
+}
+
+@keyframes saltito {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}

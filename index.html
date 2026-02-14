@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Nuestro Código Infinito</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 💗 Pantalla Inicial -->
+    <section id="inicio" class="pantalla activa">
+        <div class="corazones"></div>
+
+        <h1 class="titulo">Nuestro Código Infinito</h1>
+        <p class="subtitulo">Mi lugar favorito siempre será contigo 💛</p>
+
+        <div class="personajes-inicio">
+            <img src="assets/tatiana.png" alt="Tatiana">
+            <img src="assets/julian.png" alt="Julian">
+        </div>
+
+        <button id="btnStart" class="boton">START</button>
+
+        <p class="creditos">Creado con todo mi amor para Julián</p>
+    </section>
+
+    <!-- 🏀 Nivel 1 -->
+    <section id="nivel1" class="pantalla">
+        <h2>Nivel 1</h2>
+
+        <div class="zona-balon">
+            <img src="assets/ball.png" id="balon" alt="Balón">
+        </div>
+
+        <div id="curryContainer" class="oculto">
+            <img src="assets/curry.png" alt="Curry">
+            <p class="frase">
+                Si Curry falla triples y aún así sigue intentando… <br>
+                tú también puedes.
+            </p>
+            <button id="btnNivel2" class="boton">Siguiente Nivel</button>
+        </div>
+    </section>
+
+    <!-- 🎵 Nivel 2 -->
+    <section id="nivel2" class="pantalla">
+        <h2>Nuestra Playlist 💜</h2>
+
+        <div class="zona-corazones" id="zonaCorazones"></div>
+
+        <div class="canciones">
+            <div class="cancion" data-link="https://www.youtube.com/results?search_query=Feid+Le+Pido+a+Dios">
+                🎵 Feid – Le Pido a Dios
+                <p>Esta canción la escucho pensando en ti 💛</p>
+            </div>
+
+            <div class="cancion" data-link="https://www.youtube.com/results?search_query=Trueno+Solo+por+Vos">
+                🎵 Trueno – Solo por Vos
+                <p>Yo siempre haré todo por ti</p>
+            </div>
+
+            <div class="cancion" data-link="https://www.youtube.com/results?search_query=Nicki+Nicole+Si+Vos+Me+Lo+Pedis">
+                🎵 Nicki Nicole – Si Vos Me Lo Pedís
+                <p>Te amooo</p>
+            </div>
+
+            <div class="cancion" data-link="https://www.youtube.com/results?search_query=Morat+Mi+Suerte">
+                🎵 Morat – Mi Suerte
+                <p>Mi suerte eres tú 💛</p>
+            </div>
+        </div>
+
+        <button id="btnNivel3" class="boton oculto">Siguiente Nivel</button>
+    </section>
+
+    <!-- 💑 Nivel 3 -->
+    <section id="nivel3" class="pantalla">
+        <h2>Nuestro Encuentro 💗</h2>
+
+        <div class="zona-encuentro">
+            <img src="assets/tatiana.png" id="tatianaMove" class="personaje">
+            <img src="assets/julian.png" id="julianFinal" class="personaje">
+        </div>
+
+        <div id="mensajeEncuentro" class="oculto">
+            <p>Mientras el mundo no deje de existir y nos volvamos polvo, mi corazón siempre, siempre, buscará al tuyo.</p>
+        </div>
+
+        <button id="btnNivel4" class="boton oculto">Siguiente Nivel</button>
+    </section>
+
+    <!-- 💌 Nivel 4 - Memoria -->
+    <section id="nivel4" class="pantalla">
+        <h2>Mensajes Secretos 💌</h2>
+
+        <div class="memoria" id="juegoMemoria"></div>
+
+        <button id="btnFinal" class="boton oculto">Ver Final</button>
+    </section>
+
+    <!-- 🌌 Nivel Final -->
+    <section id="final" class="pantalla">
+        <h2>Y siempre estás presente en cada palabra y pensamiento que digo</h2>
+
+        <div class="mensaje-final">
+            <p>
+                Mientras el mundo no deje de existir y nos volvamos polvo.<br>
+                Mi corazón siempre, siempre, buscará al tuyo.
+            </p>
+
+            <div class="personajes-final">
+                <img src="assets/tatiana.png">
+                <img src="assets/julian.png">
+            </div>
+
+            <button id="reiniciar" class="boton">Reiniciar Historia</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+<audio id="musicaFondo" src="assets/musica_fondo.mp3" loop></audio>
+</body>
+</html>
